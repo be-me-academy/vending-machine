@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Machine</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js" defer></script>
+</head>
+<body>
+    <div class="vending-machine">
+        <div class="machine-top">
+            <div class="brand">VENDING MACHINE</div>
+        </div>
+
+        <div class="main-content">
+            <div class="left-section">
+                <div class="items-display">
+                    <div class="items-title">═══ AVAILABLE ITEMS ═══</div>
+                    <div class="item-grid" id="itemGrid"></div>
+                </div>
+
+                <div class="dispenser">
+                    <div class="dispenser-label">▼ PICKUP AREA ▼</div>
+                    <div id="dispensedArea"></div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="cart-display">
+                    <div class="cart-title">🛒 YOUR CART</div>
+                    <div class="cart-items" id="cartItems">
+                        <div style="text-align: center; color: #f57f17; padding: 20px;">
+                            Cart is empty<br>Click items to add
+                        </div>
+                    </div>
+                    <div class="cart-totals">
+                        <div class="total-row">
+                            <span class="total-label">ITEMS:</span>
+                            <span class="total-value" id="totalItems">0</span>
+                        </div>
+                        <div class="total-row">
+                            <span class="total-label">TOTAL:</span>
+                            <span class="total-value">฿<span id="totalPrice">0.00</span></span>
+                        </div>
+                        <div class="total-row">
+                            <span class="total-label">INSERTED:</span>
+                            <span class="total-value">฿<span id="insertedMoney">0.00</span></span>
+                        </div>
+                        <div class="total-row">
+                            <span class="total-label">CHANGE:</span>
+                            <span class="total-value">฿<span id="changeAmount">0.00</span></span>
+                        </div>
+                    </div>
+                    <div class="message-area" id="messageArea">
+                        Click items to add to cart
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="action-btn btn-checkout" onclick="checkout()">CHECKOUT</button>
+                    <button class="action-btn btn-return" onclick="returnMoney()">RETURN MONEY</button>
+                </div>
+
+                <div class="money-input">
+                    <div class="coin-slot-title">💰 INSERT MONEY</div>
+                    <div class="money-buttons">
+                        <button class="money-btn" onclick="insertMoney(0.25)">0.25</button>
+                        <button class="money-btn" onclick="insertMoney(0.50)">0.50</button>
+                        <button class="money-btn" onclick="insertMoney(1.00)">฿1</button>
+                        <button class="money-btn" onclick="insertMoney(5.00)">฿5</button>
+                        <button class="money-btn" onclick="insertMoney(10.00)">฿10</button>
+                        <button class="money-btn" onclick="insertMoney(20.00)">฿20</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
