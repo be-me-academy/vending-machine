@@ -80,7 +80,6 @@ function updateCart() {
 function insertMoney(amount) {
     // TODO: Update inserted amount
     
-    document.getElementById('insertedMoney').textContent = insertedAmount.toFixed(2);
     updateCart();
     showMessage(`Inserted ฿${amount.toFixed(2)}`);
 }
