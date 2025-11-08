@@ -78,7 +78,6 @@ function renderItems() {
 function addToCart(index) {
     // TODO 3: เพิ่มสินค้าเข้าตะกร้า
     // คำใบ้: ดึงข้อมูลสินค้าจาก items[index] แล้ว push เข้า cart
-    // อย่าลืมใช้ { ...item } เพื่อคัดลอกข้อมูล
     
     
     showMessage('Added ' + item.name + ' to cart');
