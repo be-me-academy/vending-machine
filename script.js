@@ -13,6 +13,17 @@ let items = [
 let cart = [];
 let insertedAmount = 0;
 
+
+function showMoney(money) {
+    // (1) TODO: Display amount of money to user in cart area
+    // Hint: Use DOM to set textContent of element that has id 'insertedMoney'
+}
+
+function showMessage(msg) {
+    // (2) TODO: Display message to user in message area
+    // Hint: Use DOM to set textContent of element that has id 'messageArea'
+}
+
 function renderItems() {
     const itemGrid = document.getElementById('itemGrid');
     itemGrid.innerHTML = '';
@@ -36,16 +47,14 @@ function renderItems() {
 }
 
 function addToCart(index) {
-    // TODO: Add item to cart by index
+    // (3) TODO: Add item to cart by index, then use function showMessage() to update display
     
-    showMessage(`Added ${item.name} to cart`);
     updateCart();
 }
 
 function removeFromCart(index) {
-    // TODO: Remove item from cart at index
+    // (4) TODO: Remove item from cart at index, then use function showMessage() to update display
     
-    showMessage('Item removed from cart');
     updateCart();
 }
 
@@ -70,7 +79,7 @@ function updateCart() {
         });
     }
     
-    // TODO: Calculate total items, total price and change
+    // (5) TODO: Calculate total items, total price and change
     
     document.getElementById('totalItems').textContent = totalItems;
     document.getElementById('totalPrice').textContent = totalPrice.toFixed(2);
@@ -78,7 +87,7 @@ function updateCart() {
 }
 
 function insertMoney(amount) {
-    // TODO: Update inserted amount
+    // (6) TODO: Update inserted amount, then use function showMoney() to update display
     
     updateCart();
     showMessage(`Inserted ฿${amount.toFixed(2)}`);
@@ -92,7 +101,7 @@ function checkout() {
 
     console.log(cart)
     
-    // TODO: Calculate total price and change
+    // (7) TODO: Calculate total price and change
     
     // Display items in dispenser
     const dispensedArea = document.getElementById('dispensedArea');
@@ -118,7 +127,7 @@ function checkout() {
     
     // Reset after 3 seconds
     setTimeout(() => {
-        // TODO: Reset inserted amount and clear cart
+        // (8) TODO: Reset inserted amount and clear cart, then use function showMoney() to update display
         
         dispensedArea.innerHTML = '';
         showMessage('Click items to add to cart');
@@ -136,7 +145,7 @@ function returnMoney() {
         showMessage(`Returned ฿${insertedAmount.toFixed(2)}`);
         
         setTimeout(() => {
-            // TODO: Reset inserted amount
+            // (9) TODO: Reset inserted amount, then use function showMoney() to update display
 
             dispensedArea.innerHTML = '';
             updateCart();
@@ -144,10 +153,6 @@ function returnMoney() {
     } else {
         showMessage('No money to return');
     }
-}
-
-function showMessage(msg) {
-    document.getElementById('messageArea').textContent = msg;
 }
 
 // Initialize
