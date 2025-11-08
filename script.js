@@ -137,10 +137,12 @@ function updateCart() {
     // คำใบ้: ใช้ document.getElementById('totalPrice') แล้วเปลี่ยน textContent
     
     
-    // TODO 9: แสดงเงินทอน (ใช้ DOM)
-    // คำใบ้: ใช้ document.getElementById('changeAmount') แล้วเปลี่ยน textContent
     // ถ้าเงินทอนติดลบให้แสดง '0' แทน
-    
+    if (change < 0) {
+        document.getElementById('changeAmount').textContent = 0;
+    } else {
+        document.getElementById('changeAmount').textContent = change;
+    }
 }
 
 // Checkout
@@ -150,12 +152,12 @@ function checkout() {
         return;
     }
     
-    // TODO 10: คำนวณราคารวมของสินค้าทั้งหมด
+    // TODO 9: คำนวณราคารวมของสินค้าทั้งหมด
     // คำใบ้: เหมือนกับใน TODO 5 - วนลูปหาผลรวม
     let totalPrice = 0;
     
     
-    // TODO 11: ตรวจสอบว่าเงินที่ใส่มาพอหรือไม่
+    // TODO 10: ตรวจสอบว่าเงินที่ใส่มาพอหรือไม่
     // คำใบ้: คำนวณเงินทอน (currentMoney - totalPrice) และตรวจสอบว่าติดลบหรือไม่
     const change = 0;
     
@@ -178,7 +180,7 @@ function checkout() {
     
     // รอ 3 วินาที แล้วจึงรีเซ็ตทุกอย่างเพื่อเริ่มใหม่
     setTimeout(function() {
-        // TODO 12: รีเซ็ตตะกร้าและเงินที่ใส่เข้ามา
+        // TODO 11: รีเซ็ตตะกร้าและเงินที่ใส่เข้ามา
         // คำใบ้: ตั้งค่า cart เป็น array ว่าง [] และ currentMoney เป็น 0
         
         
