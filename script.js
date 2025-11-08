@@ -186,7 +186,6 @@ function checkout() {
         
         document.getElementById('money').textContent = '0';
         dispensedArea.innerHTML = '';
-        showMessage('Click items to add to cart');
         updateCart();
     }, 3000);
 }
